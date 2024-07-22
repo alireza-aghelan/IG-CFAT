@@ -19,12 +19,12 @@ In the field of single image super-resolution (SISR), transformer-based models h
 
 Our experiments demonstrate that IG-CFAT sets new benchmarks in real-world image super-resolution, outperforming SOTA models in both quantitative and qualitative metrics. The results are shown in the following Figures.
 <br><br>
-<img src="https://github.com/user-attachments/assets/239d990d-d56f-424f-8e8e-52702669a1ae" width="600">
+<img src="./figures/1.jpg" width="600">
 
 Quantitative comparison between IG-CFAT and GAN-based SR methods.
 <br><br>
-<img src="https://github.com/user-attachments/assets/33f57ac6-5a3a-4234-a63d-58124dd5e562" style="margin: 0; padding: 0;">
-<img src="https://github.com/user-attachments/assets/924e7a9f-d5e7-4d8c-8a07-8126c0799032" style="margin: 0; padding: 0;">
+<img src="./figures/2.jpg" style="margin: 0; padding: 0;">
+<img src="./figures/3.jpg" style="margin: 0; padding: 0;">
 
 Visual comparison of IG-CFAT with GAN-based SR methods.
 <br><br>
