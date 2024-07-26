@@ -7,7 +7,7 @@ Welcome to the official GitHub repository for IG-CFAT, an improved GAN-Based mod
 
 In the field of single image super-resolution (SISR), transformer-based models have showcased remarkable progress. However, their application and efficiency in real-world image super-resolution are less noticed, presenting substantial opportunities for improvement. IG-CFAT bridges this gap by leveraging the strengths of some recent techniques to enhance real-world image super-resolution, surpassing existing state-of-the-art (SOTA) models.
 
-# Key Features
+## Key Features
 
 - **Composite Fusion Attention Transformer (CFAT)**: Our model builds on the CFAT architecture, which has already demonstrated superior performance in classic image super-resolution tasks. [CFAT](https://github.com/rayabhisek123/CFAT)
 - **Semantic-Aware Discriminator**: To reconstruct image details more accurately and significantly improve perceptual quality, IG-CFAT incorporates a semantic-aware discriminator. [SeD](https://github.com/lbc12345/SeD)
@@ -25,18 +25,13 @@ git clone https://github.com/alireza-aghelan/IG-CFAT
 cd IG-CFAT
 ```
 
-Install the basic dependencies:
+Install the basic dependencies and requirements:
 
 ```bash
 pip install basicsr
 pip install pywavelets
 pip install -r requirements.txt
 python setup.py develop
-```
-
-Create and activate a new conda environment, then install PyTorch and CLIP:
-
-```bash
 conda create -n SeD python=3.9
 conda activate SeD
 pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html
@@ -50,7 +45,7 @@ pip install git+https://github.com/openai/CLIP.git
 Run the following command to train the MSE model:
 
 ```bash
-python igcfat/train.py -opt /content/IG-CFAT/options/train/train_IG_CFAT_SRx4_mse_model.yml --auto_resume
+python igcfat/train.py -opt IG-CFAT/options/train/train_IG_CFAT_SRx4_mse_model.yml --auto_resume
 ```
 
 ## Fine-tune from MSE Model
@@ -58,7 +53,7 @@ python igcfat/train.py -opt /content/IG-CFAT/options/train/train_IG_CFAT_SRx4_ms
 Run the following command to fine-tune the model from the pre-trained MSE model:
 
 ```bash
-python igcfat/train.py -opt /content/IG-CFAT/options/train/train_IG_CFAT_SRx4_finetune_from_mse_model.yml --auto_resume
+python igcfat/train.py -opt IG-CFAT/options/train/train_IG_CFAT_SRx4_finetune_from_mse_model.yml --auto_resume
 ```
 
 # Testing
@@ -66,7 +61,7 @@ python igcfat/train.py -opt /content/IG-CFAT/options/train/train_IG_CFAT_SRx4_fi
 Run the following command to test the model:
 
 ```bash
-python /content/IG-CFAT/igcfat/test.py -opt /content/IG-CFAT/options/test/IG_CFAT_SRx4.yml
+python IG-CFAT/igcfat/test.py -opt IG-CFAT/options/test/IG_CFAT_SRx4.yml
 ```
 
 # Results
