@@ -1,5 +1,5 @@
-name: HAT_GAN_Real_SRx4
-model_type: HATModel
+name: IG_CFAT_SRx4
+model_type: TestModel
 scale: 4
 num_gpu: 1  # set num_gpu: 0 for cpu mode
 manual_seed: 0
@@ -20,8 +20,6 @@ datasets:
 network_g:
   type: CFAT
   window_size: 16
-
-
 
 # path
 path:

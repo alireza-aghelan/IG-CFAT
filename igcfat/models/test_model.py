@@ -11,7 +11,7 @@ from tqdm import tqdm
 from os import path as osp
 
 @MODEL_REGISTRY.register()
-class HATModel(SRModel):
+class TestModel(SRModel):
 
     def pre_process(self):
         # pad to multiplication of window_size
