@@ -29,6 +29,7 @@ Install the basic dependencies:
 
 ```bash
 pip install basicsr
+pip install pywavelets
 pip install -r requirements.txt
 python setup.py develop
 ```
@@ -46,7 +47,7 @@ pip install git+https://github.com/openai/CLIP.git
 
 ## Train MSE Model (from scratch)
 
-Run the following command to train the model using MSE loss:
+Run the following command to train the MSE model:
 
 ```bash
 python igcfat/train.py -opt /content/IG-CFAT/options/train/train_IG_CFAT_SRx4_mse_model.yml --auto_resume
@@ -54,7 +55,7 @@ python igcfat/train.py -opt /content/IG-CFAT/options/train/train_IG_CFAT_SRx4_ms
 
 ## Fine-tune from MSE Model
 
-Run the following command to fine-tune the model from a pre-trained MSE model:
+Run the following command to fine-tune the model from the pre-trained MSE model:
 
 ```bash
 python igcfat/train.py -opt /content/IG-CFAT/options/train/train_IG_CFAT_SRx4_finetune_from_mse_model.yml --auto_resume
