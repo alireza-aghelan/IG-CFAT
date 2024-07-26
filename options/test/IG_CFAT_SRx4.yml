@@ -12,7 +12,7 @@ datasets:
   test_1:  # the 1st test dataset
     name: custom
     type: SingleImageDataset
-    dataroot_lq: /content/CFAT-GAN/LR
+    dataroot_lq: ./LR
     io_backend:
       type: disk
 
@@ -23,7 +23,7 @@ network_g:
 
 # path
 path:
-  pretrain_network_g: ./experiments/pretrained_models/cfat_finetune.pth
+  pretrain_network_g: ./experiments/pretrained_models/IG_CFAT.pth
   strict_load_g: true
   param_key_g: 'params_ema'
 

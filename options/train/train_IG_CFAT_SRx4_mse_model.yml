@@ -55,7 +55,7 @@ datasets:
   train:
     name: DF2K+OST
     type: RealESRGANDataset
-    dataroot_gt: datasets/dental # Refer to Real-ESRGAN for OST dataset. Only DF2K is OK.
+    dataroot_gt: datasets/DF2K
     meta_info_file: hat/data/meta_info/meta_info_DFOsub_GT.txt
     io_backend:
       type: disk
@@ -144,10 +144,10 @@ train:
 
   scheduler:
     type: MultiStepLR
-    milestones: [4000]
+    milestones: [86300]
     gamma: 0.5
 
-  total_iter: 4000
+  total_iter: 86300
   warmup_iter: -1  # no warm up
 
   # losses

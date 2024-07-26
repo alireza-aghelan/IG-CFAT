@@ -58,7 +58,7 @@ datasets:
   train:
     name: DF2K+OST
     type: RealESRGANDataset
-    dataroot_gt: datasets/dental # Refer to Real-ESRGAN for OST dataset. Only DF2K is OK.
+    dataroot_gt: datasets/DF2K
     meta_info_file: hat/data/meta_info/meta_info_DFOsub_GT.txt
     io_backend:
       type: disk
@@ -142,7 +142,7 @@ network_d:
 
 # path
 path:
-  pretrain_network_g: ~
+  pretrain_network_g: ./experiments/pretrained_models/IG_CFAT_mse.pth
   param_key_g: params_ema
   strict_load_g: true
   resume_state: ~
@@ -163,10 +163,10 @@ train:
 
   scheduler:
     type: MultiStepLR
-    milestones: [44000]
+    milestones: [43150]
     gamma: 0.5
 
-  total_iter: 44000
+  total_iter: 43150
   warmup_iter: -1  # no warm up
 
   # losses
