@@ -10,9 +10,23 @@ In the field of single image super-resolution (SISR), transformer-based models h
 ## Key Features
 
 - **Composite Fusion Attention Transformer (CFAT)**: Our model builds on the CFAT architecture, which has already demonstrated superior performance in classic image super-resolution tasks. [CFAT](https://github.com/rayabhisek123/CFAT)
-- **Semantic-Aware Discriminator**: To reconstruct image details more accurately and significantly improve perceptual quality, IG-CFAT incorporates a semantic-aware discriminator. [SeD](https://github.com/lbc12345/SeD)
+- **Semantic-Aware Discriminator (SeD)**: To reconstruct image details more accurately and significantly improve perceptual quality, IG-CFAT incorporates a semantic-aware discriminator. [SeD](https://github.com/lbc12345/SeD)
 - **Adaptive Degradation Model**: We utilize an adaptive degradation model to better simulate real-world image degradations, making our approach more robust and effective. [DASR](https://github.com/csjliang/DASR) - [StarSRGAN](https://github.com/kynthesis/StarSRGAN)
 - **Wavelet Losses**: By adding wavelet losses to the conventional loss functions used in GAN-based super-resolution models, IG-CFAT can reconstruct high-frequency details more efficiently. [Wavelettention](https://github.com/mandalinadagi/Wavelettention)
+
+# Results
+
+Our experiments demonstrate that IG-CFAT sets new benchmarks in real-world image super-resolution, outperforming SOTA models in both quantitative and qualitative metrics. The results are shown in the following Figures.
+<br><br>
+<img src="./figures/1.jpg" width="600">
+
+Quantitative comparison between IG-CFAT and GAN-based SR methods.
+<br><br>
+<img src="./figures/2.jpg" style="margin: 0; padding: 0;">
+<img src="./figures/3.jpg" style="margin: 0; padding: 0;">
+
+Visual comparison of IG-CFAT with GAN-based SR methods.
+<br><br>
 
 # Training Setup
 
@@ -24,7 +38,6 @@ Clone the repository and navigate into the directory:
 git clone https://github.com/alireza-aghelan/IG-CFAT
 cd IG-CFAT
 ```
-
 Install the basic dependencies and requirements:
 
 ```bash
@@ -40,17 +53,15 @@ pip install git+https://github.com/openai/CLIP.git
 
 # Training
 
-## Train MSE Model (from scratch)
-
-Run the following command to train the MSE model:
+- Modify the configuration files in ./options/train according to your requirements.
+- Run the following command to train the MSE model from scratch using L1 loss and adaptive degradation model:
 
 ```bash
 python igcfat/train.py -opt IG-CFAT/options/train/train_IG_CFAT_SRx4_mse_model.yml --auto_resume
 ```
 
-## Fine-tune from MSE Model
-
-Run the following command to fine-tune the model from the pre-trained MSE model:
+- Place the pre-trained MSE model in the ./experiments/pretrained_models directory.
+- Run the following command to fine-tune the MSE model using our GAN framework:
 
 ```bash
 python igcfat/train.py -opt IG-CFAT/options/train/train_IG_CFAT_SRx4_finetune_from_mse_model.yml --auto_resume
@@ -58,23 +69,19 @@ python igcfat/train.py -opt IG-CFAT/options/train/train_IG_CFAT_SRx4_finetune_fr
 
 # Testing
 
-Run the following command to test the model:
+- Place testing data in the ./LR directory.
+- Place pre-trained models in the ./experiments/pretrained_models directory.
+- Modify the specific settings in ./options/test/IG_CFAT_SRx4.yml according to your requirements.
+- Run the following command to test the model:
 
 ```bash
 python IG-CFAT/igcfat/test.py -opt IG-CFAT/options/test/IG_CFAT_SRx4.yml
 ```
 
-# Results
+The results will be saved in the ./results folder.
 
-Our experiments demonstrate that IG-CFAT sets new benchmarks in real-world image super-resolution, outperforming SOTA models in both quantitative and qualitative metrics. The results are shown in the following Figures.
-<br><br>
-<img src="./figures/1.jpg" width="600">
-
-Quantitative comparison between IG-CFAT and GAN-based SR methods.
-<br><br>
-<img src="./figures/2.jpg" style="margin: 0; padding: 0;">
-<img src="./figures/3.jpg" style="margin: 0; padding: 0;">
-
-Visual comparison of IG-CFAT with GAN-based SR methods.
-<br><br>
 Our code is built on [BasicSR](https://github.com/XPixelGroup/BasicSR), [CFAT](https://github.com/rayabhisek123/CFAT), and [HAT](https://github.com/XPixelGroup/HAT). Thanks to their great work.
+
+# Contact
+
+If you have any questions, please email alireza.aghelan20@gmail.com.
