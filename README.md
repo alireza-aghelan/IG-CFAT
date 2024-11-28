@@ -22,8 +22,8 @@ Our experiments demonstrate that IG-CFAT sets new benchmarks in real-world image
 
 Quantitative comparison between IG-CFAT and GAN-based SR methods.
 <br><br>
-<img src="./figures/2.jpg" style="margin: 0; padding: 0;">
-<img src="./figures/3.jpg" style="margin: 0; padding: 0;">
+
+![2](https://github.com/user-attachments/assets/4733a248-a142-4f5b-ada0-999827d4df9f)
 
 Visual comparison of IG-CFAT with GAN-based SR methods.
 <br><br>
