@@ -24,9 +24,9 @@ Quantitative comparison between IG-CFAT and GAN-based SR methods.
 
 ---
 
-![5B355E4A-62F1-44ED-83DC-FBFEF57B7F2C_1_201_a](https://github.com/user-attachments/assets/a57a46f4-c42b-4fec-881c-a8d4b9a6f854)
-
-![ECCB3684-FAA3-4B1A-AC37-89A24F3BA8C0_1_201_a](https://github.com/user-attachments/assets/d42ba830-3f04-4824-82e4-1a4150df78a7)
+<p>
+  <img src="https://github.com/user-attachments/assets/a57a46f4-c42b-4fec-881c-a8d4b9a6f854" width="49%"><img src="https://github.com/user-attachments/assets/d42ba830-3f04-4824-82e4-1a4150df78a7" width="49%">
+</p>
 
 Visual comparison of IG-CFAT with GAN-based SR methods.
 
