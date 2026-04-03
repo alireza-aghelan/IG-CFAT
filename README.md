@@ -5,7 +5,7 @@ Welcome to the official GitHub repository for IG-CFAT, an improved GAN-Based mod
 
 # Overview
 
-In the field of single image super-resolution (SISR), transformer-based models have showcased remarkable progress. However, their application and efficiency in real-world image super-resolution are less noticed, presenting substantial opportunities for improvement. IG-CFAT bridges this gap by leveraging the strengths of some recent techniques to enhance real-world image super-resolution, surpassing existing state-of-the-art (SOTA) models.
+In single image super-resolution (SISR), particularly under simple synthetic degradation settings such as bicubic downsampling, transformer-based models have shown remarkable progress. However, their potential for real-world image super-resolution remains relatively underexplored, leaving substantial room for improvement. IG-CFAT addresses this gap by integrating recent effective techniques to enhance real-world image super-resolution and outperform existing state-of-the-art (SOTA) methods.
 
 ## Key Features
 
